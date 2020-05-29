@@ -1,0 +1,3 @@
+[submodule "exampleoutputname"]
+	path = exampleoutputname
+	url = https://github.com/dokongg/dokongg.github.io.git

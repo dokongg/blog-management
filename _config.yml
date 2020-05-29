@@ -45,7 +45,6 @@ github_username:  jekyll
 # Build settings
 theme: minima
 
-categories: [Algorithms, Java]
 
 permalink: /:title
 
@@ -57,11 +56,19 @@ pagination:
   sort_field: "date"
   sort_reverse: true
 
+categories: [Algorithms, Java, Spring, React.js, Trouble Shooting]
+
 navigation:
   - title: Algorithms
     url: "/Algorithms/index"
   - title: Java
     url: "/Java/index"
+  - title: Spring
+    url: "/Spring/index"
+  - title: React.js
+    url: "/React.js/index"
+  - title: Trouble Shooting
+    url: "/Trouble-Shooting/index"
 
 plugins:
   - jekyll-feed

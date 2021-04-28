@@ -6,6 +6,11 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+  .footer-icon-attribute {
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
   .pagination .selected-page {
       color: #000;
       font-weight: bold;

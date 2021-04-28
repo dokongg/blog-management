@@ -17,7 +17,7 @@
       margin: 10px;
   }
 
-  a, a h2 {
+  a, a h2, a h4 {
     font-weight: 100;
     color: #636363;
   }
@@ -28,6 +28,10 @@
 
   .post.center {
       text-align: center;
+  }
+
+  .post-right {
+    text-align: right;
   }
 
   .site-title, .site-title:visited {
@@ -61,6 +65,10 @@
   }
   .post-title.p-name {
     text-align: center;
+    font-size: 1.225rem;
+  }
+  .post-title {
+    font-size: 1.225rem;
   }
   .post-content {
       background-color: #fff;

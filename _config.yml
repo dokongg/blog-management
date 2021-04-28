@@ -56,19 +56,21 @@ pagination:
   sort_field: "date"
   sort_reverse: true
 
-categories: [Algorithms, Java, Spring, React.js, Trouble Shooting]
+categories: [Algorithms, CS, Java, Spring, JPA, ES ]
 
 navigation:
   - title: Algorithms
     url: "/Algorithms/index"
+  - title: CS
+    url: "/CS/index"
   - title: Java
     url: "/Java/index"
   - title: Spring
     url: "/Spring/index"
-  - title: React.js
-    url: "/React.js/index"
-  - title: Trouble Shooting
-    url: "/Trouble-Shooting/index"
+  - title: JPA
+    url: "/JPA/index"
+  - title: ES
+    url: "/ES/index"
 
 plugins:
   - jekyll-feed

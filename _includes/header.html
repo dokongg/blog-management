@@ -17,6 +17,11 @@
           </span>
         </label>
         <div class="trigger">
+          <div>
+            <div id="search" >
+                {% include search-form.html placeholder="keyword" %}
+            </div>
+          </div>
           {% for link in site.navigation %}
             <a class="page-link" href="{{ link.url }}">{{ link.title }}</a>
           {% endfor %}

@@ -1,0 +1,58 @@
+---
+layout: page
+---
+
+<form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
+
+<div id="search-result-info"></div>
+<ul class="posts" id="search-results"></ul>
+
+{% assign totalCount = {{site.posts.size}} %}
+{% assign startPage = 1 %}
+{% assign endPage = {{totalCount | divided_by: 5.0 | ceil | plus: 1}} %}
+{% assign totalPageGroup = {{endPage | divided_by: 5.0 | ceil | plus: 1}} %}
+{% assign currentPageGroup = 1 %}
+
+<div class="pagination">
+</div>
+<input type="hidden" id="searchTerm" value="" />
+<input type="hidden" id="totalCount" value="{{totalCount}}" />
+<input type="hidden" id="currentPage" value="1" />
+<input type="hidden" id="startPage" value="{{startPage}}" />
+<input type="hidden" id="endPage" value="{{endPage}}" />
+<input type="hidden" id="totalPageGroup" value="{{totalPageGroup}}" />
+<input type="hidden" id="currentPageGroup" value="{{currentPageGroup}}" />
+
+<script>
+    $(document).ready(function() {
+      init();
+
+      $('.pagination a').on('click', function(e) {
+        var $target = $(e.target);
+        var page = $target.data('page');
+        $('.pagination a').removeClass('selected-page');
+        $target.addClass('selected-page');
+
+        $('#currentPage').val(page);
+        getPage();
+      });
+
+    })
+
+    window.store = {
+    {% for post in site.posts %}
+    "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    };
+</script>
+<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/search.js"></script>

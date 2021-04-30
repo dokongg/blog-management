@@ -109,4 +109,13 @@
     margin: 0 10px;
     font-size: 12px;
   }
+  .post-content {
+      background-color: #fff;
+      border: 1px solid #efefef;
+      padding: 30px 20px 15px 20px;
+      margin-bottom: none;
+  }
+  .post-content h4 {
+	margin: none;
+  }
 }

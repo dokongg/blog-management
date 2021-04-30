@@ -22,7 +22,7 @@ var getPagination = function() {
 }
 
 var displaySearchResults = function(results, store, initalize) {
-    var searchResults = document.getElementById('search-results');
+    var searchResults = $('#search-results');
 
     var totalCount = results.length;
     var endPage = Math.ceil(totalCount / 5.0);

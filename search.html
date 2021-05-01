@@ -2,13 +2,15 @@
 layout: page
 ---
 
-<form action="/search" method="get" hidden="hidden">
-    <label for="search-box"></label>
-    <input type="text" id="search-box" name="query">
-</form>
+<div class="post-content search-content">
+  <form action="/search" method="get" hidden="hidden">
+      <label for="search-box"></label>
+      <input type="text" id="search-box" name="query">
+  </form>
 
-<div id="search-result-info"></div>
-<ul class="posts search-posts" id="search-results"></ul>
+  <div id="search-result-info"></div>
+  <ul class="posts search-posts" id="search-results"></ul>
+</div>
 
 {% assign totalCount = {{site.posts.size}} %}
 {% assign startPage = 1 %}
@@ -34,11 +36,13 @@ layout: page
         var $target = $(e.target);
         var page = $target.data('page');
         var currentPage = $('.pagination a.selected-page').data('page');
-                                                                
+
+        console.log("?");
+
         if ( currentPage == page ) {
             return;
         }
-          
+
         $('.pagination a').removeClass('selected-page');
         $target.addClass('selected-page');
 

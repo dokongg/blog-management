@@ -12,10 +12,10 @@ layout: page
   <ul class="posts search-posts" id="search-results"></ul>
 </div>
 
-{% assign totalCount = {{site.posts.size}} %}
+{% assign totalCount = site.posts.size %}
 {% assign startPage = 1 %}
-{% assign endPage = {{totalCount | divided_by: 5.0 | ceil | plus: 1}} %}
-{% assign totalPageGroup = {{endPage | divided_by: 5.0 | ceil | plus: 1}} %}
+{% assign endPage = totalCount | divided_by: 5.0 | ceil | plus: 1 %}
+{% assign totalPageGroup = endPage | divided_by: 5.0 | ceil | plus: 1 %}
 {% assign currentPageGroup = 1 %}
 
 <div class="pagination">

@@ -1,5 +1,6 @@
 # _config.yml
 # for Travis CI. (shit custom gem api...) ##################
+future: true
 destination: ./exampleoutputname
 
 production_url: https://dokongg.github.io/

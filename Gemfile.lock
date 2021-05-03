@@ -83,7 +83,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  jekyll (~> 4.0.0)
+  jekyll (~> 3.9.1)
   jekyll-feed (~> 0.12)
   jekyll-paginate-v2
   kramdown (~> 2.3.1)

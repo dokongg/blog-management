@@ -77,11 +77,9 @@ plugins:
 
 markdown: kramdown
 kramdown:
-    highlighter: rouge
-    syntax_highlighter_opts:
-        block:
-            line_numbers: true
- 
+  input: GFM
+  hard_wrap: false
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

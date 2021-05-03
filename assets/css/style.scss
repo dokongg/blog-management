@@ -8,6 +8,9 @@
   * {
     font-family: D2Coding, 'D2 coding', monospace;
   }
+
+  *:visited { color: #636363; text-decoration: none;}
+
   body {
     letter-spacing: -1px;
     background-color: #f7f7f7;
@@ -15,6 +18,9 @@
 
   ul.posts {
       list-style:none;
+  }
+  .post-link {
+      display: inline-block !important;
   }
   .pagination .selected-page {
       color: #000;
@@ -29,8 +35,8 @@
   }
 
   a, a h2, a h4 {
-    font-weight: 100;
-    color: #636363;
+      font-weight: 100;
+      color: #636363;
   }
   a:hover {
       text-decoration: none;
@@ -41,42 +47,50 @@
       text-align: center;
   }
 
-  .post-right {
-    text-align: right;
+  .post-right, .post-date {
+      text-align: right;
+  }
+
+  div.post-date {
+      display: inline;
+      float: right;
+      margin-top: 30px !important;
+      font-size: 14px;
+      color: #828282;
   }
 
   .site-title, .site-title:visited {
-    color: #fff;
+      color: #fff;
   }
 
   .site-header {
-    background-color: #000;
+      background-color: #000;
   }
 
   .trigger .page-link {
-    color: #fff
+      color: #fff
   }
 
   .wrapper-center {
-    text-align: center;
+      text-align: center;
   }
   .home {
-    background-color: #fff;
-    border: 1px solid #cecece;
-    padding: 10px 10px 80px 10px;
-    color: #6f6f6f;
-    text-align: center;
-    width: 200px;
-    display: inline-block;
-    margin-top: 50px;
+      background-color: #fff;
+      border: 1px solid #cecece;
+      padding: 10px 10px 80px 10px;
+      color: #6f6f6f;
+      text-align: center;
+      width: 200px;
+      display: inline-block;
+      margin-top: 50px;
   }
 
   .post-title.p-name {
-    text-align: center;
-    font-size: 1.225rem;
+      text-align: center;
+      font-size: 1.225rem;
   }
   .post-title {
-    font-size: 1.225rem;
+      font-size: 1.225rem;
   }
   .post-content {
       background-color: #fff;
@@ -86,35 +100,51 @@
   }
 
   .post-content h1, .post-content h2, .post-content h3 {
-    margin: 30px 0;
+      margin: 30px 0;
   }
 
   .search-input {
-    border: 1px solid #ccc;
-    line-height: 24px;
-    outline: none;
-    padding: 0 5px;
+      border: 1px solid #ccc;
+      line-height: 24px;
+      outline: none;
+      padding: 0 5px;
   }
   .search-count {
-    color: #0095ff;
+      color: #0095ff;
    }
-
+  .search-post-contents {
+      color: #a9a9a9;
+ }
+ .post-delimiter {
+      border-top: 1px solid #e4e4e4;
+      padding-bottom: 30px;
+ }
+ ul {
+      margin: 30px;
+ }
+ .post-delimiter:first-of-type {
+      border: none;
+ }
 @media screen and (min-width: 600px) {
   .trigger .page-link {
-     color: #fff;
+      color: #fff;
+  }
+
+  div.post-date {
+    display: block;
   }
 }
 @media screen and (max-width: 599px) {
   .trigger .page-link {
-     color: #2d2d2d;
+      color: #2d2d2d;
   }
   .search-input {
-    border: 1px solid #ccc;
-    line-height: 24px;
-    outline: none;
-    padding: 0 5px;
-    margin: 0 10px;
-    font-size: 12px;
+      border: 1px solid #ccc;
+      line-height: 24px;
+      outline: none;
+      padding: 0 5px;
+      margin: 0 10px;
+      font-size: 12px;
   }
   .post-content {
       background-color: #fff;
@@ -123,15 +153,23 @@
       margin-bottom: none;
   }
   .search-content {
-    padding: 0 20px 40px 20px;
+      padding: 0 20px 40px 20px;
   }
   .post-content h4 {
-    	margin: none;
+      margin: none;
   }
   .post-content-body {
-      padding-top: 30px;
+       padding-top: 30px;
    }
   .search-posts {
       margin-top: 50px;
+  }
+  .post-link {
+    display: block !important;
+  }
+  div.post-date {
+    font-size: 14px;
+    display: block;
+    margin: 0 !important;
   }
 }

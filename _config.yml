@@ -75,10 +75,12 @@ navigation:
 plugins:
   - jekyll-feed
 
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
+#markdown: kramdown
+#kramdown:
+#    highlighter: rouge
+#    syntax_highlighter_opts:
+#        block:
+#            line_numbers: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -5,6 +5,13 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+  * {
+    font-family: D2Coding, 'D2 coding', monospace;
+  }
+  body {
+    letter-spacing: -1px;
+    background-color: #f7f7f7;
+  }
 
   ul.posts {
       list-style:none;
@@ -64,10 +71,6 @@
     margin-top: 50px;
   }
 
-  body {
-    letter-spacing: -1px;
-    background-color: #f7f7f7;
-  }
   .post-title.p-name {
     text-align: center;
     font-size: 1.225rem;

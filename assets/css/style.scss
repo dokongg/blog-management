@@ -29,9 +29,11 @@
   }
   pre {
     padding: initial;
-  } 
+    overflow-x: initial;
+  }
   pre.highlight {
     border: initial;
+    overflow-x: initial;
   }
   pre.highlight
   .rouge-table, .rouge-table tbody, .rouge-table tr, .rouge-table td, .rouge-table .lineno, .rouge-table .rouge-code pre {
@@ -51,10 +53,6 @@
   .rouge-code pre span {
     white-space: nowrap !important;
     overflow-wrap: initial !important;
-  }
-  .rouge-code pre {
-    display:inline-block;
-    // min-width: 700px;
   }
   div.highlighter-rouge .highlight {
     border-radius: 4px;

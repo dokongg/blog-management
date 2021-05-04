@@ -4,17 +4,21 @@
 
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+  "minima/initialize",
+  'font-awesome';
+
+  $fa-font-path: "fonts/font-awesome/";
 
   * {
     font-family: D2Coding, 'D2 coding', monospace;
   }
-
+  .fas {
+    padding-right: 0.5rem;
+  }
   .post-content-body a, .post-content-body a:hover {
     color: #636363 !important;
     text-decoration: underline;
   }
-
   *:visited { color: #636363; text-decoration: none;}
 
   body {
@@ -134,9 +138,9 @@
   }
   .post-title {
       font-size: 1.225rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
   }
   .post-content {
       background-color: #fff;
@@ -153,7 +157,8 @@
       border: 1px solid #ccc;
       line-height: 24px;
       outline: none;
-      padding: 0 5px;
+      padding: 0 10px;
+      border-radius: 4px;
   }
   .search-count {
       color: #0095ff;
@@ -196,6 +201,35 @@
 }
 
 @media screen and (max-width: 599px) {
+  .site-nav input:checked ~ .trigger {
+      display: block;
+      padding-bottom: 5px;
+      border: 1px solid #d7d7d7;
+      background-color: #fff;
+      margin-top: 2.95rem;
+      border-radius: 5px;
+  }
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background-color: initial;
+    border: initial;
+    text-align: right;
+  }
+  .site-nav .menu-icon > svg path {
+    fill: #fff;
+  }
+  
+  ul.posts {
+    margin: initial;
+  }
+  ul.posts .post-link {
+    font-size: 1.0rem !important;
+  }
+  .post-content h4 {
+    font-size: 1.0rem !important;
+  }
   .trigger .page-link {
       color: #2d2d2d;
   }
@@ -203,7 +237,7 @@
       border: 1px solid #ccc;
       line-height: 24px;
       outline: none;
-      padding: 0 5px;
+      padding: 0 10px;
       margin: 0 10px;
       font-size: 12px;
   }
@@ -212,6 +246,9 @@
       border: 1px solid #efefef;
       padding: 0 20px 15px 20px;
       margin-bottom: none;
+  }
+  .search-results {
+    margin-top: 3.0rem;
   }
   .search-content {
       padding: 0 20px 40px 20px;
@@ -226,7 +263,7 @@
       margin-top: 50px;
   }
   div.post-date {
-    font-size: 14px;
+    font-size: 0.8rem;
     display: block;
     margin: 0 !important;
   }

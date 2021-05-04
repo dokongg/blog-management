@@ -46,6 +46,11 @@ github_username:  jekyll
 # Build settings
 theme: minima
 
+gems:
+  - jekyll-font-awesome-sass
+
+font-awesome:
+  assets: true
 
 permalink: /:title
 

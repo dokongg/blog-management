@@ -19,6 +19,10 @@
     color: #636363 !important;
     text-decoration: underline;
   }
+  .code-block {
+    float: right;
+    padding-top: 0.4rem;
+  }
   *:visited { color: #636363; text-decoration: none;}
 
   body {
@@ -220,7 +224,7 @@
   .site-nav .menu-icon > svg path {
     fill: #fff;
   }
-  
+
   ul.posts {
     margin: initial;
   }

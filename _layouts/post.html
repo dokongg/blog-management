@@ -33,3 +33,9 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script>
+  $(document).ready(function() {
+    $('pre.highlight').prepend('<i class="fas fa-code code-block"></i>');
+  })
+</script>

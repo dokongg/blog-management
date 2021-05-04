@@ -20,7 +20,6 @@
     text-decoration: underline;
   }
   .code-block {
-    float: right;
     padding-top: 0.4rem;
   }
   *:visited { color: #636363; text-decoration: none;}
@@ -28,9 +27,6 @@
   body {
     letter-spacing: -1px;
     background-color: #f7f7f7;
-  }
-  table {
-    width: initial;
   }
   pre {
     padding: initial;
@@ -44,6 +40,9 @@
       max-width: 20px;
       border-radius: initial;
       padding-right: 1em;
+  }
+  .highlight {
+    text-align: right;
   }
   div.highlighter-rouge .highlight {
     border-radius: 4px;

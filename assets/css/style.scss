@@ -49,7 +49,8 @@
     overflow-wrap: initial !important;
   }
   .rouge-code pre {
-    min-width: 600x
+    display:inline-block;
+    // min-width: 700px;
   }
   div.highlighter-rouge .highlight {
     border-radius: 4px;

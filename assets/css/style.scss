@@ -40,6 +40,10 @@
       border-radius: initial;
       padding-right: 1em;
   }
+  td.rouge-code {
+     padding: initial;
+     padding-right: 1.0rem;
+  }
   .highlight {
     text-align: right;
   }
@@ -206,9 +210,6 @@
 }
 
 @media screen and (max-width: 599px) {
-  .rouge-code pre {
-    min-width: 600px;
-  }
   .wrapper {
     padding: initial !important;
   }

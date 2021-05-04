@@ -23,7 +23,6 @@
     padding-top: 0.4rem;
   }
   *:visited { color: #636363; text-decoration: none;}
-
   body {
     letter-spacing: -1px;
     background-color: #f7f7f7;
@@ -207,6 +206,9 @@
 }
 
 @media screen and (max-width: 599px) {
+  .rouge-code pre {
+    min-width: 500px;
+  }
   .wrapper {
     padding: initial !important;
   }

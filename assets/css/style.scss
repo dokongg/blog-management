@@ -16,11 +16,6 @@
     color: #636363 !important;
     text-decoration: underline;
   }
-  .post-content-body {
-       font-size: 15px;
-       color: #060606;
-       font-weight: 300;
-   }
    .post-content-body a {
      font-weight: initial;
    }
@@ -30,7 +25,9 @@
   *:visited { color: #636363; text-decoration: none;}
   body {
     background-color: #f7f7f7;
-    //font-size: 0.9rem;
+    color: rgb(34, 36, 38);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
   .post-content-body ul:first-of-type {
     margin: 0px 0px 40px 30px;

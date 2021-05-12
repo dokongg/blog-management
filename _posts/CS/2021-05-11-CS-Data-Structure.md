@@ -7,7 +7,6 @@ categories: CS
 
 ---
 
-[목차]   
 
 1. **Array vs. Linked List**   
    1.1. Array   

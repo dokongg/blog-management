@@ -62,7 +62,7 @@ pagination:
   sort_field: "date"
   sort_reverse: true
 
-categories: [Algorithms, CS, Java, Spring, JPA, ES ]
+categories: [Algorithms, CS, Java, Spring, JPA, ES, MSA]
 
 navigation:
   - title: Algorithms
@@ -77,6 +77,8 @@ navigation:
     url: "/JPA/index"
   - title: ES
     url: "/ES/index"
+  - title: MSA
+    url: "/MSA/index"
 
 plugins:
   - jekyll-feed

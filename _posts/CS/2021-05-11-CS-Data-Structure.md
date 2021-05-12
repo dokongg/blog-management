@@ -4,22 +4,40 @@ title:      "Part 1-2. 자료구조"
 date:       2021-05-11
 categories: CS
 
+
 ---
 
 [목차]   
 
 1. **Array vs. Linked List**   
-   1.1. Array
+   1.1. Array   
    1.2. Linked List  
+
+
+
 2. **Stack and Queue**   
    2.1. Stack   
    2.2. Queue  
+
+
+
 3. **Tree**   
    3.1. Binary Tree(이진 트리)  
-   3.2. 장기 스테줄러   
-   3.3. 단기 스케줄러   
-   3.4. 중기 스케줄러     
-4.
+   3.2. Binary Tree(이진 트리)의 종류   
+   3.3. BST(Binary Search Tree)   
+
+4. **Binary Heap**
+
+5. **Red Black Tree(RBT)**
+
+   5.1. Red Black Tree의 정의   
+   5.2. Red Black Tree의 특징   
+   5.3. Red Black Tree의 삽입   
+   5.4. Red Black Tree의 삭제   
+
+6. **Hash Table**   
+   6.1. Hash Function   
+   6.2. Resolve Conflict
 
 - - -
 
@@ -37,7 +55,6 @@ categories: CS
 (2) 단점
 
  - 삭제 또는 삽입의 과정에서는 해당 원소에 접근하여 작업을 완료한 뒤(`o(n)`), 또 한 가지의 작업을 추가적으로 해 줘야 하기 때문에, 시간이 더 걸린다.
-
    + 삭제하는 경우
      + 만약 배열의 원소 중 어느 원소를 삭제했다고 했을 때, 배열의 연속적인 특징이 깨지게 된다(빈 공간이 발생).
      + 삭제한 원소보다 큰 인덱스를 갖는 원소들을 `shift` 해 줘야 하는 비용(cost)이 발생하고, 이 경우의 시간 복잡도는 `O(n)`이 된다.
@@ -73,7 +90,7 @@ categories: CS
 (1) 특징
 
 - 선형 자료구조의 일종
-- LIFO(Last In First Out
+- LIFO(Last In First Out)
 
 
 
@@ -113,38 +130,39 @@ categories: CS
     + height: 트리의 최고 레벨
 
 - 배열로 구성된 Binary Tree는 노드의 개수가 n이고 root가 0이 아닌 1에서 시작할 때, i번째 노드에 대해서 아래의 index를 갖는다.
-
   + parent(i) = i/2
   + left_child(i) = 2i
   + right_child(i) = 2i+1
 
 
 
-##### **3.2. Binary Tree(이진 트리)의 종류**
+**3.2. Binary Tree(이진 트리)의 종류**
 
 (1) Perfect Binary Tree(포화 이진 트리)
 + 모든 레벨이 꽉 찬 이진 트리
+
 (2) Complete Binary Tree(완전 이진 트리)
 + 위에서 아래로, 왼쪽에서 오른쪽으로 순서대로 차곡차곡 채워진 이진 트리
-(3)Full Binary Tree(정 이진 트리)
+
+(3) Full Binary Tree(정 이진 트리)
 + 모든 노드가 0개 혹은 2개의 자식 노드만을 갖는 이진 트리
-(4) BST(Binary Search Tree)
 
 
 
-##### **3.3. BST(Binary Search Tree)**
+**3.3. BST(Binary Search Tree)**
 
-- 이진 탐색 트리에는 데이터를 저장하는 규칙이 존재
-  : 이 규칙은 특정 데이터의 위치를 찾는 데 사용할 수 있다.
+- 이진 탐색 트리에는 데이터를 저장하는 규칙이 존재: 이 규칙은 특정 데이터의 위치를 찾는 데 사용할 수 있다.
   + 규칙 1. 이진 탐색 트리의 노드에 저장된 키는 유일하다.
   + 규칙 2. 부모의 키가 왼쪽 자식 노드의 키보다 크다.
   + 규칙 3. 부모의 키가 오른쪽 자식 노드의 키보다 작다.
   + 규칙 4. 왼쪽과 오른쪽 서브트리도 이진 탐색 트리이다.
+
 - 시간 복잡도: `O(n)`
   + 정확하게 말하면 `O(h)`
     + 트리의 높이를 하나씩 더해갈 수록 추가할 수 있는 노드의 수가 두 배씩 증가하기 때문
       하지만 이러한 이진 탐색 트리는 Skewed Tree(편향 트리)가 될 수 있다.
     + 이럴 경우 성능에 영향을 미치게 되며, 탐색의 Worst case가 되며, 시간 복잡도는 `O(n)`이 된다.
+
 - Rebalancing 기법
   + 배열보다 많은 메모리를 사용하며 데이터를 저장했지만 탐색에 필요한 시간 복잡도가 같게 되는 비효율적인 문제를 해결하기 위한 기법
   + 균형을 잡기 위한 트리 구조의 재조정
@@ -176,18 +194,15 @@ categories: CS
 (3) 시간 복잡도
 
 - heap의 구조를 계속 유지하기 위해서는 제거된 루트 노드를 대체할 다른 노드가 필요하다.
-
-- - 여기서 heap은 맨 마지막 노드를 루트 노드로 대체시킨 후, 다시 heapify 과정을 거쳐 heap 구조를 유지한다.
-  - 결국, `O(logn)` 의 시간 복잡도로 최댓값 또는 최솟값이 접근할 수 있게 된다.
-
+- 여기서 heap은 맨 마지막 노드를 루트 노드로 대체시킨 후, 다시 heapify 과정을 거쳐 heap 구조를 유지한다.
+  + 결국, `O(logn)` 의 시간 복잡도로 최댓값 또는 최솟값이 접근할 수 있게 된다.
 
 
-#### **5. Red Black Tree(RBT)**
+
+#### 5. **Red Black Tree(RBT)**
 
 - BST를 기반으로 하는 트리 형식의 자료 구조
-
 - BST의 삽입, 삭제 연산 과정에서 발생할 수 있는 문제점을 해결하기 위해 만들어진 자료구조
-
 - 검색/삽입/삭제에 대한 시간 복잡도: `O(logn)`
   + 동일한 노드 개수일 때, depth를 최소화하여 시간 복잡도를 줄이는 것이 핵심 아이디어
     + depth가 최소가 되는 경우는 tree가 complete binary tree 인 경우
@@ -197,13 +212,9 @@ categories: CS
 ##### **5.1. Red Black Tree의 정의**
 
 - 각 노드는 Red or Black 이라는 색깔을 갖는다.
-
 - Root node의 색깔은 Black 이다.
-
 - 각 leaf node는 Black 이다.
-
 - 어떤 노드의 색깔이 Red 라면, 두 개의 children의 색깔은 모두 black 이다.
-
 - 각 노드에 대해서 노드로부터 descendant leaves 까지의 단순 경로는 모두 같은 수의 black nodes 들을 포함하고 있다.
   + Black-Height: 노드 x로 부터 노드 x를 포함하지 않은 leaf node 까지의 simple path 상에 있는 black nodes 들의 개수
 
@@ -219,19 +230,17 @@ categories: CS
 
 
 
-##### **5.3. Red Black Tree의 삽입**
+##### 5.3. Red Black Tree의 삽입
 
 - BST의 특성을 유지하면서 노드를 삽입
-
 - 삽입된 노드의 색깔을 Red로 지정
   + Red로 지정하는 이유: Black-Height 변경을 최소화하기 위함
-
 - 삽입 결과 RBT의 특성을 위배(violation)하는 경우 노드의 색깔을 조정하고, Black-Height가 위배되었다면 rotation을 통해 height를 조정한다.
   + RBT의 동일한 height에 존재하는 internal node 들의 Black-height가 같아지게 되고, 최소 경로와 최대 경로의 크기 비율이 2 미만으로 유지된다.
 
 
 
-##### **5.4. Red Black Tree의 삭제**
+##### 5.4. Red Black Tree의 삭제
 
 - BST의 특성을 유지하면서 노드를 삭제
 - 삭제될 노드의 개수에 따라 rotation 방법이 달라지게 된다.
@@ -240,7 +249,7 @@ categories: CS
 
 
 
-#### **6. Hash Table**
+#### 6. Hash Table
 
 - 내부적으로 배열을 사용하여 데이터를 저장하기 때문에 빠른 검색 속도를 갖는다.
 - average case에 대한 시간 복잡도: `O(1)`
@@ -252,7 +261,7 @@ categories: CS
     + 특별한 알고리즘을 이용하여 저장할 데이터와 연관된 고유한 숫자를 만들어 낸 뒤 이를 인덱스로 사용한다.
     + 특정 데이터가 저장되는 인덱스는 그 데이터만의 고유한 위치이기 때문에, 삽입 연산 시 다른 데이터의 사이에 끼어들거나, 삭제 시 다른 데이터로 채울 필요가 없으므로 연산에서 추가적인 비용이 없도록 만들어진 구조
 
-##### **6.1. Hash Function**
+##### 6.1. Hash Function
 
 (1) 특징
 
@@ -278,7 +287,7 @@ categories: CS
 
 
 
-##### **6.1. Resolve Conflict**
+##### 6.2. Resolve Conflict
 
 (1) Open Conflict
 
@@ -287,7 +296,7 @@ categories: CS
 - 공개 주소 방식이라고도 불리며, collision이 발생하면 데이터를 저장할 장소를 찾아 헤맨다.
   + 최악의 경우: 비어있는 버킷을 찾지 못하고 탐색을 시작한 위치까지 되돌아 오는 경우
     + Linear Probing: 순차적으로 탐색하며, 비어있는 버킷을 찾을 때까지 계속 진행된다.
-    + Quandratic probing: 2차 함수를 이용해 탐색할 위치를 찾는다.
+    + Quadratic probing: 2차 함수를 이용해 탐색할 위치를 찾는다.
     + Double hashing probing: 하나의 해시 함수에서 충돌이 발생하면, 2차 해시 함수를 이용해 새로운 주소를 할당한다. 위 두 가지 방법에 비해 많은 연산량을 요구하게 된다.
 
 

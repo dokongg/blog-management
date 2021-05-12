@@ -9,9 +9,6 @@
 
   $fa-font-path: "fonts/font-awesome/";
 
-  * {
-    font-family: D2Coding, 'D2 coding', monospace;
-  }
   .fas {
     padding-right: 0.5rem;
   }
@@ -22,8 +19,11 @@
   .post-content-body {
        font-size: 15px;
        color: #060606;
+       font-weight: 300;
    }
-
+   .post-content-body a {
+     font-weight: initial;
+   }
   .code-block {
     padding-top: 0.4rem;
   }
@@ -49,10 +49,6 @@
   }
   .post-content-body blockquote p {
     padding-left: 0.7rem;
-    background-color: #f1f1f1;
-  }
-  .post-content-body blockquote li {
-    color: #060606;
   }
   .post-content-body ul li ul li:first-of-type {
     padding-top: 0.4rem;
@@ -80,6 +76,7 @@
       padding-right: 1em;
   }
   .highlight {
+    font-family: D2Coding, 'D2 coding', monospace;
     text-align: right;
     white-space: nowrap !important;
   }
@@ -102,6 +99,9 @@
     padding-left: 1em;
     width: 2.5em;
   }
+  code.language-plaintext {
+    background-color: #f1f1f1;
+  }
   hr {
     height: .25em;
     padding: 0;
@@ -111,7 +111,12 @@
     border: 0;
   }
   blockquote {
+    border-left: 4px solid #5dce9a;
+    padding-top: 2rem;
+    padding-bottom: 0.2rem;
+    background-color: #f7f7f7;
     font-style: initial;
+    color: #000;
   }
 
   .hightlighter {
@@ -137,7 +142,6 @@
   }
 
   a, a h2, a h4 {
-      font-weight: 100;
       color: #636363;
   }
   a:hover {

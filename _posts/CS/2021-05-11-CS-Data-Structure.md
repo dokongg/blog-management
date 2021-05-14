@@ -229,7 +229,7 @@ categories: CS
 
 
 
-##### 5.3. Red Black Tree의 삽입
+##### **5.3. Red Black Tree의 삽입**
 
 - BST의 특성을 유지하면서 노드를 삽입
 - 삽입된 노드의 색깔을 Red로 지정
@@ -239,7 +239,7 @@ categories: CS
 
 
 
-##### 5.4. Red Black Tree의 삭제
+##### **5.4. Red Black Tree의 삭제**
 
 - BST의 특성을 유지하면서 노드를 삭제
 - 삭제될 노드의 개수에 따라 rotation 방법이 달라지게 된다.
@@ -248,7 +248,7 @@ categories: CS
 
 
 
-#### 6. Hash Table
+#### **6. Hash Table**
 
 - 내부적으로 배열을 사용하여 데이터를 저장하기 때문에 빠른 검색 속도를 갖는다.
 - average case에 대한 시간 복잡도: `O(1)`
@@ -260,7 +260,7 @@ categories: CS
     + 특별한 알고리즘을 이용하여 저장할 데이터와 연관된 고유한 숫자를 만들어 낸 뒤 이를 인덱스로 사용한다.
     + 특정 데이터가 저장되는 인덱스는 그 데이터만의 고유한 위치이기 때문에, 삽입 연산 시 다른 데이터의 사이에 끼어들거나, 삭제 시 다른 데이터로 채울 필요가 없으므로 연산에서 추가적인 비용이 없도록 만들어진 구조
 
-##### 6.1. Hash Function
+##### **6.1. Hash Function**
 
 (1) 특징
 
@@ -286,7 +286,7 @@ categories: CS
 
 
 
-##### 6.2. Resolve Conflict
+##### **6.2. Resolve Conflict**
 
 (1) Open Conflict
 

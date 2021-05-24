@@ -1,41 +1,30 @@
 ---
 layout:     post
-title:      "Part 1-5. 데이터베이스"
-date:       2021-05-12
+title:      "Part 1-3. 네트워크"
+date:       2021-05-24
 categories: CS
 
 
 ---
 
 
-1. **데이터베이스**   
-   1.1. 데이터베이스를 사용하는 이유   
-   1.2. 데이터베이스의 특징   
-   1.3. 데이터베이스의 성능  
+1. **HTTP GET/POST**   
+   1.1. GET   
+   1.2. POST   
 
 
-2. **Index**   
-   2.1. Index란 무엇인가   
-   2.2. Index의 자료구조   
-   2.3. Index의 종류   
-   2.4. Clustered index   
-   2.5. Index의 성능과 고려해야 할 사항   
+2. **TCP 3-way handshake**   
+   2.1.
 
 
-3. **정규화**   
-   3.1. 정규화의 탄생 배경  
-   3.2. 정규화란 무엇인가   
-   3.3. 정규화의 종류   
-   3.4. 정규화의 장단점   
-   3.5. 반정규화(De-normalization)
+3. **TCP와 UDP**   
+   3.1. UDP   
+   3.2. TCP   
 
 
-4. **Transaction**   
-   4.1. 트랜잭션(Transaction)이란 무엇인가  
-   4.2. 트랜잭션과 Lock     
-   4.3. 트랜잭션의 특성  
-   4.4. 트랜잭션의 상태   
-   4.5. 트랜잭션을 사용할 때 주의할 점  
+4. **HTTP와 HTTPS**   
+   4.1. HTTP의 문제점  
+   4.2. HTTPS     
 
 
 5. **교착상태**   

@@ -503,7 +503,7 @@ int sum = intList.stream().mapToInt(Integer::intValue).sum();
 
 ```
 - 설명
-   IntStream에 스트림의 모든 값을 더해주는 `sum()`이 있기 떄문에, `intList`를 IntStream으로 바꾸어 사용해야 한다.
+   IntStream에 스트림의 모든 값을 더해주는 `sum()`이 있기 때문에, `intList`를 IntStream으로 바꾸어 사용해야 한다.
    + `IntStream.of()`로 직접 생성과 초기화하여 `IntStream`으로 만드는 방법도 있지만, `mapToInt()`로 기본 스트림을 IntStream으로 바꿔줄 수 있다.
 
 
@@ -618,7 +618,7 @@ str = names.stream()
   - 스트림의 형태가 배열과 같을 때, 모든 원소를 단일 원소 스트림으로 반환할 수 있다.
   - 여러 개의 스트림을 한 개의 스트림으로 합쳐준다.
   - 복잡한 스트림을 간단한 스트림으로 변경하는 데 사용할 수 있다.
-  - `flatMap`의 결과로 단일 원소 스트림을 반환하기 떄문에 `filter` 메서드를 바로 체이닝하여 사용할 수 있다.
+  - `flatMap`의 결과로 단일 원소 스트림을 반환하기 때문에 `filter` 메서드를 바로 체이닝하여 사용할 수 있다.
   - 초기에 생성된 스트림이 배열인 경우에 매우 유용하다.
 >
 > ```java

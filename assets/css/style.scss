@@ -56,6 +56,7 @@
   pre {
     padding: initial;
     overflow-x: initial;
+    background-color: #f9f9f9;
   }
   pre.highlight {
     border: initial;
@@ -102,12 +103,11 @@
     border-radius: initial;
   }
   hr {
-    height: .05em;
-    padding: 0;
-    color: #fff;
-    margin: 24px 0;
-    background-color: #e1e4e8;
-    border: 0;
+    margin: 40px 0;
+    height: 3px;
+    border: none;
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
   }
   blockquote {
     border-left: 4px solid #5dce9a;

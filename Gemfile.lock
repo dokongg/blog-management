@@ -66,7 +66,8 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rexml (3.2.5)
+    rexml (3.3.3)
+      strscan
     rouge (3.26.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
@@ -78,6 +79,7 @@ GEM
       ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
+    strscan (3.1.0)
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
@@ -89,6 +91,7 @@ PLATFORMS
   universal-darwin-20
   x64-mingw32
   x86-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (~> 3.9.1)
